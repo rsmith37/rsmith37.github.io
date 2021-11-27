@@ -10,12 +10,21 @@ export default function App() {
 
   return (
     <div className="App">
-      <nav style={{display: 'flex', justifyContent: 'space-between', position: 'fixed', top: 0, overflow: 'hidden', width: '100%', zIndex: 99}}>
-        <a href='/' style={{textDecoration: 'none'}}>RICHARD SMITH</a>
-        <div>
-          <a href='#about'>About</a>
-          <a href='#work'>Work</a>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <div className="name">
+            <a href='/'>RICHARD SMITH</a>
+          </div>
+          <ul>
+            <li>
+              <a href='#about'>About</a>    
+            </li>
+            <li>
+              <a href='#work'>Work</a>
+            </li>
+          </ul>
         </div>
+          
       </nav>
 
       <div>
