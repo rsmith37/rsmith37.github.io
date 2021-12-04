@@ -2,13 +2,12 @@
 </script>
 
 <div class="index-container">
-  
+  Home
 </div>
 
 <style>
 
   .index-container {
-    background-color: blueviolet;
     flex: 1;
   }
 

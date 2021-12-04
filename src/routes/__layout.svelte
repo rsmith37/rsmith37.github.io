@@ -1,7 +1,9 @@
 <script>
+  import {page} from '$app/stores'; //gets current url path
   import Navbar from "../components/Navbar.svelte";
 
   const date = new Date().getFullYear();
+
 </script>
 
 <svelte:head>
@@ -12,7 +14,7 @@
 </svelte:head>
 
 <div class="container">
-  <Navbar/>
+  <Navbar selected={$page.path}/>
   <slot></slot>  
   <footer>
     Designed and developed by Richard Smith &copy; {date}
@@ -20,9 +22,17 @@
 </div>
 
 <style>
+  :global(:root) {
+    --primary-color: #34495E;
+    --secondary-color: #2C3E50;
+    --accent-color: #82E0AA;
+  }
+
   :global(body) {
     margin: 0px;
     font-family: Nunito;
+    background-color: var(--primary-color);
+    color: white;
   }
 
 
