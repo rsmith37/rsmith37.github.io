@@ -8,6 +8,9 @@
       <a href="/">Richard Smith</a>
     </div>
     <ul>
+      <li class='{selected === "/about" ? "current" : ""}'>
+        <a href="/about">About</a>
+      </li>
       <li class='{selected === "/experience" ? "current" : ""}'>
         <a href="/experience">Experience</a>
       </li>
@@ -46,7 +49,7 @@
   }
 
   .navbar-brand {
-    font-size: 30px;
+    font-size: 60px;
     font-weight:700;
   }
 
