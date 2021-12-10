@@ -1,1 +1,7 @@
-## Richard Smith 
+# Richard Smith 
+
+## About Me
+
+## Experience
+
+## Projects
