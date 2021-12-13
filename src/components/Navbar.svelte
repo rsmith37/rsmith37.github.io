@@ -1,17 +1,25 @@
 <script>
+  import { onMount } from "svelte";
+
   export let selected;
   
-  let navBarOpen = false;
+  let openNavbar = false;
 
-  const setNavBar = () => {
-    navBarOpen = !navBarOpen
-    console.log(navBarOpen);
-    if(navBarOpen) {
-     document.getElementById("link-container").style.display = "flex";
-    } else {
-      document.getElementById("link-container").style.display = "none";
+  const setNavBar = () => openNavbar = !openNavbar;
+
+  const resetNavBar = e => {
+    if(!e.matches) {
+      openNavbar = false;
     }
   };
+
+  onMount(() => {
+    const windowListener = window.matchMedia("(max-width: 960px)");
+
+    // windowListener.addListener(resetNavBar);
+    windowListener.addEventListener('change', resetNavBar);
+  });
+
 </script>
 
 <nav>
@@ -27,7 +35,7 @@
       </button>
     </div>
     <div id="link-container">
-      <ul>
+      <ul class={`navbar-list${openNavbar ? ' mobile' : ''}`}>
         <li class='{selected === "/about" ? "current" : ""}'>
           <a href="/about">About</a>
         </li>
@@ -62,14 +70,17 @@
   }
 
   .menu {
-    width: auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   #nav-button {
-    display: none;
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
   }
 
   nav a {
@@ -95,35 +106,34 @@
     }
   }
 
-  nav ul {
+  .navbar-list {
     list-style: none;
-    display: flex;
+    display: none;
     align-items: center;
     padding-inline-start: 0px;
-  }
-
-  /* #link-container {
-    display: flex;
     flex-direction: column;
-  } */
-
-  @media only screen and (max-width: 960px) {
-    #link-container {
-      display: none;
-    }
-
-    nav ul {
-      flex-direction: column;
-    }
   }
 
-  @media only screen and (max-width: 960px) {
+  .navbar-list.mobile {
+    display: flex;
+  }
+
+  @media only screen and (min-width: 960px) {
     .menu {
-      width: 100%;
+      width: auto;
     }
 
     #nav-button {
-      display: block;
+      display: none;
+    }
+
+    #link-container {
+      display: flex;
+    }
+
+    .navbar-list {
+      display: flex;
+      flex-direction: row;
     }
   }
 
