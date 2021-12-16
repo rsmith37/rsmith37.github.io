@@ -3,23 +3,25 @@
 </script>
 
 <div class="index-container">
-  <p class="home-text">
-    <span in:fade={{delay:500, duration:1000}}>Aspiring software developer.</span> <span in:fade={{delay:1000, duration:2000}}>Avid learner.</span> <span in:fade={{delay:1500, duration:2500}}>Tech enthusiast</span>
-  </p>
+  <div class="content-container">
+    <h1 class="welcome">
+      <span in:fade={{duration: 1000}}>Hi </span>
+      <span in:fade={{duration: 1000, delay: 1000}}>and welcome to my website! &#128075;</span>
+    </h1>
+  </div>
 </div>
 
 <style>
 
   .index-container {
-    display: flex;
+    /* display: flex; */
     /* flex: 1; */
-    align-items: center;
+    /* align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: center; */
+    width: 75%;
+    margin: auto;
   }
 
-  .home-text {
-    font-size: 3rem;
-  }
 
 </style>
