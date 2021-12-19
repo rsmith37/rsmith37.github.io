@@ -25,7 +25,6 @@
 
   .content-container {
     display: flex;
-    /* justify-content: space-between; */
     flex-direction: column-reverse;
     margin: auto;
     align-items: center;
@@ -33,10 +32,18 @@
     width: 90%;  
   }
 
-  /* @media only screen and (min-width: 425px) {
-    .content-container {
+  
+  .image img {
+    vertical-align: middle;
+    border-radius: 50%;
+    transform: scale(0.75);
+  }
+
+  @media only screen and (min-width: 425px) {
+    .image img {
+      transform: scale(1.0);
     }
-  } */
+  }
 
   @media only screen and (min-width: 725px) {
     .content-container {
@@ -57,10 +64,6 @@
     }
   }
 
-  .image img {
-    vertical-align: middle;
-    border-radius: 50%;
-  }
 
 
 </style>
