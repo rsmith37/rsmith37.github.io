@@ -26,10 +26,10 @@
   <div class="navbar-container">
     <div class="menu">
       <div class="navbar-brand">
-        <a href="/">Richard Smith</a>
+        <a id="navbar-brand-name" href="/">Richard Smith</a>
       </div>
       <button type="button" id="nav-button" on:click={setNavBar}>
-        <svg xmlns="http://www.w3.org/2000/svg" id="menu" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24" style=" fill:#ffffff;">
+        <svg xmlns="http://www.w3.org/2000/svg" id="menu" x="0px" y="0px" width="36" height="36" viewBox="0 0 24 24" style=" fill:#ffffff;">
           <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path>
         </svg>
       </button>
@@ -57,7 +57,7 @@
     width: '100%';
     height: auto;
     padding: 2rem;
-    /* z-index: 99; */
+    z-index: 99;
     background-color: var(--secondary-color);
   }
 
@@ -90,21 +90,28 @@
   }
 
   .navbar-brand {
-    font-size: 3rem;
+    font-size: 48px;
     font-weight:700;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 550px) {
     .navbar-brand {
-      font-size: 2rem;
+      font-size: 40px;
+      padding-right: 2rem;
     }
   }
 
-  @media only screen and (max-width: 400px) {
+  /* @media only screen and (max-width: 455px) {
+    .navbar-brand {
+      font-size: 32px;
+    }
+  } */
+
+  /* @media only screen and (max-width: 400px) {
     .navbar-brand {
       font-size: 1rem;
     }
-  }
+  } */
 
   .navbar-list {
     list-style: none;

@@ -1,8 +1,8 @@
 <script>
   import {page} from '$app/stores'; //gets current url path
   import Navbar from "../components/Navbar.svelte";
+  import Footer from "../components/Footer.svelte";
 
-  const date = new Date().getFullYear();
 
 </script>
 
@@ -16,9 +16,7 @@
 <div class="container">
   <Navbar selected={$page.path}/>
   <slot></slot>  
-  <footer>
-    Designed and developed by Richard Smith &copy; {date}
-  </footer>
+  <Footer />
 </div>
 
 <style>
@@ -41,9 +39,5 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-  }
-
-  footer {
-    text-align: center;
   }
 </style>
