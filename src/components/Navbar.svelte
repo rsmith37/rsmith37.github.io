@@ -37,13 +37,13 @@
     <div id="link-container">
       <ul class={`navbar-list${openNavbar ? ' mobile' : ''}`}>
         <li class='{selected === "/about" ? "current" : ""}'>
-          <a href="/about">About</a>
+          <a href="/about">&#60;About /&#62;</a>
         </li>
         <li class='{selected === "/experience" ? "current" : ""}'>
-          <a href="/experience">Experience</a>
+          <a href="/experience">&#60;Experience /&#62;</a>
         </li>
         <li class='{selected === "/projects" ? "current" : ""}'>
-          <a href="/projects">Projects</a>
+          <a href="/projects">&#60;Projects /&#62;</a>
         </li>
       </ul>
     </div>
