@@ -29,7 +29,7 @@
         <a id="navbar-brand-name" href="/">Richard Smith</a>
       </div>
       <button type="button" id="nav-button" on:click={setNavBar}>
-        <svg xmlns="http://www.w3.org/2000/svg" id="menu" x="0px" y="0px" width="36" height="36" viewBox="0 0 24 24" style=" fill:#ffffff;">
+        <svg xmlns="http://www.w3.org/2000/svg" id="svg-icon" x="0px" y="0px"  viewBox="0 0 24 24">
           <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path>
         </svg>
       </button>
@@ -94,10 +94,21 @@
     font-weight:700;
   }
 
+  #svg-icon {
+    fill: white;
+    width: 36px;
+    height: 36px;
+  }
+
   @media only screen and (max-width: 550px) {
     .navbar-brand {
-      font-size: 40px;
+      font-size: 24px;
       padding-right: 2rem;
+    }
+
+    #svg-icon {
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -109,7 +120,7 @@
 
   /* @media only screen and (max-width: 400px) {
     .navbar-brand {
-      font-size: 1rem;
+      font-size: 32px;
     }
   } */
 
