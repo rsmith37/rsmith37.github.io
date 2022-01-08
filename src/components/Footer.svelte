@@ -26,7 +26,7 @@
     </ul>
   </div>
   <div class="copyright-text">
-    Copyright &copy;{date} All rights reserved
+    <p class="footer-text">Copyright &copy;{date} All rights reserved</p>
   </div>
 </footer>
 
@@ -60,5 +60,9 @@
 
   #github-icon {
     fill: white;
+  }
+
+  .footer-text {
+    font-size: 12px;
   }
 </style>
