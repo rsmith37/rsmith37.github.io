@@ -1,7 +1,7 @@
 <script>
   import { each } from "svelte/internal";
   
-  export let proj_name, proj_desc, techs, link;
+  export let proj_name, proj_desc, techs, link, image;
 </script>
 
 <div class="project-container">
@@ -13,14 +13,22 @@
     </h3>
   </div>
   <div class="content">
-    <p class="content-desc">{proj_desc}</p>
-    <ul class="tech-list">
-      {#each techs as tech}
-        <li class="tech-list-item">
-          {tech}
-        </li>
-      {/each}
-    </ul>
+    {#if image !== undefined}
+     <div class="content-image">
+        <!-- svelte-ignore a11y-img-redundant-alt -->
+        <img src={image} alt="Image Not Availble">
+      </div>
+    {/if}
+    <div class="content-text">
+      <p class="content-desc">{proj_desc}</p>
+      <ul class="tech-list">
+        {#each techs as tech}
+          <li class="tech-list-item">
+            {tech}
+          </li>
+        {/each}
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -28,19 +36,7 @@
   .project-container {
     width: 70%;
     margin: auto;
-    /* display: flex; */
-    /* padding: 20px; */
     text-align: left;
-  }
-
-  .title {
-    /* background-color: black; */
-    /* flex: 30%; */
-    /* text-align: left; */
-  }
-
-  .title-name {
-    /* margin-right: 10px; */
   }
 
   .title-name a {
@@ -48,15 +44,19 @@
     color: white
   }
 
-  .content {
-    /* background-color: red; */
-    /* flex: 70%; */
+  .content-image {
+    display: flex;
+    justify-content: center;
   }
 
-  .content-desc {
-    /* margin-left: 10px;
-    margin-right: 10px; */
-    /* text-align: left; */
+  @media only screen and (max-width: 550px) {
+    .content-image {
+      display: none;
+    }
+  }
+
+  .content-image img {
+    max-width: 100%;
   }
 
   .arrow {
