@@ -1,12 +1,17 @@
-import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: {
-		adapter: adapter(),
+	preprocess: preprocess(),
 
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+	kit: {
+		target: '#svelte',
+		adapter: adapter({
+			pages: 'build',  // path to public directory
+			assets: 'build',  // path to public directory
+			fallback: null
+		})
 	}
 };
 

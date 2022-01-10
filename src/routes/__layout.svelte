@@ -14,7 +14,7 @@
 </svelte:head>
 
 <div class="container">
-  <Navbar selected={$page.path}/>
+  <Navbar selected={$page.url.pathname}/>
   <slot></slot>  
   <Footer />
 </div>
