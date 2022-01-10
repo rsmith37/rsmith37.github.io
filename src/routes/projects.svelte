@@ -31,10 +31,9 @@
     <hr />
     <Project
         proj_name={"AR Chem: Shared Augmented Reality (AR) Experience of 3D Molecules for Chemistry Students"}
-        proj_desc={"As an undergraduate research assistant, worked with team to pair Augmented Reality (AR) and Machine Learning (ML) in an AR molecule viewing mobile app. Utilized a combination of Unity 3D, Google ARCore and Google Firebase to create the integrated learning experience. Culminated in abstract and poster presentation: Georgia Gwinnett College School of Science and Technology STaRS, April 2019. (1st Place Poster Contest) & Consortium for Computer Sciences in Colleges Central Plains Conference, April 2019 (2nd Place Research Contest)"}
+        proj_desc={"As an undergraduate research assistant, worked with team to pair Augmented Reality (AR) and Machine Learning (ML) in an AR molecule viewing mobile app. Utilized a combination of Unity 3D, Google ARCore and Google Firebase to create the integrated learning experience. Culminated in abstract and poster presentation: Georgia Gwinnett College School of Science and Technology STaRS, April 2019 (1st Place Poster Contest) & Consortium for Computer Sciences in Colleges Central Plains Conference, April 2019 (2nd Place Research Contest)"}
         techs={["C#", "Unity 3D", "Google AR Core", "Google Firebase"]}
         image={'./ARChem.png'}
-        demo_link={'https://rsmith37.github.io/ARChem.png'}
     />
     <hr />
     <Project 

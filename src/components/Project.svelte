@@ -19,8 +19,13 @@
     {#if image !== undefined}
      <div class="content-image">
         <a href={demo_link}>
-          <!-- svelte-ignore a11y-img-redundant-alt -->
-          <img src={image} alt="Image Not Availble">
+          {#if demo_link === undefined}
+            <!-- svelte-ignore a11y-img-redundant-alt -->
+            <img src={image} alt="Image Not Availble" onclick="window.open(this.src)">
+          {:else}
+            <!-- svelte-ignore a11y-img-redundant-alt -->
+            <img src={image} alt="Image Not Availble">
+          {/if}
         </a>
       </div>
     {/if}
