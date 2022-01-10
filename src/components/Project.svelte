@@ -8,7 +8,10 @@
   <div class="title">
     <h3 class="title-name">
       <a href={github_link}>
-        {proj_name} <span class="arrow">&#8680;</span>
+        {proj_name}
+        {#if github_link !== undefined}
+          <span class="arrow">&#8680;</span>
+        {/if} 
       </a>
     </h3>
   </div>
