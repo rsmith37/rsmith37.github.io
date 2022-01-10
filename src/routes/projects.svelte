@@ -11,6 +11,14 @@
         demo_link={"https://www.youtube.com/watch?v=nFGA5kceqFE&t=8s"}
     /> 
     <hr />
+    <Project
+        proj_name={"GGC Study"}
+        proj_desc={"Worked independently as part of Information Technology Research course to create GGC Study, a reactive CRUD web application that allows students to schedule and view study group meetings. Built using the MERN stack, along with Redux for state management and deployed into production using Heroku."}
+        github_link={"https://github.com/rsmith37/GGCStudy"}
+        techs={["ReactJS", "Redux", "NodeJs/Express", "MongoDB", "HTML", "BootstrapCSS", "Heroku"]}
+        image={'./GGCStudy.png'}
+    />
+    <hr />
     <Project 
         proj_name={"Digital Mapping Project"}
         proj_desc={"Collaborated with Software Development Technology I team to develop an interactive mapping application using the Angular framework following the Waterfall and Agile methodologies. Utlized Google Maps API to display static location markers that would display information when selected by user."}
