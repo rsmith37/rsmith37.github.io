@@ -37,13 +37,13 @@
     <div id="link-container">
       <ul class={`navbar-list${openNavbar ? ' mobile' : ''}`}>
         <li class='{selected === "/about" ? "current" : ""}'>
-          <a href="/about">&#60;About /&#62;</a>
+          <a href="/about">About</a>
         </li>
         <li class='{selected === "/experience" ? "current" : ""}'>
-          <a href="/experience">&#60;Experience /&#62;</a>
+          <a href="/experience">Experience</a>
         </li>
         <li class='{selected === "/projects" ? "current" : ""}'>
-          <a href="/projects">&#60;Projects /&#62;</a>
+          <a href="/projects">Projects</a>
         </li>
       </ul>
     </div>
@@ -55,13 +55,15 @@
     position: sticky;
     top: 0px;
     width: '100%';
+    padding-top: 10px;
+    padding-bottom: 10px;
     height: auto;
-    padding: 2rem;
     z-index: 99;
     background-color: var(--secondary-color);
   }
 
   .navbar-container {
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
