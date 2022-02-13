@@ -36,12 +36,12 @@
     </div>
     <div id="link-container">
       <ul class={`navbar-list${openNavbar ? ' mobile' : ''}`}>
-        <li class='{selected === "/about" ? "current" : ""}'>
+        <!-- <li class='{selected === "/about" ? "current" : ""}'>
           <a href="/about">About</a>
         </li>
         <li class='{selected === "/experience" ? "current" : ""}'>
           <a href="/experience">Experience</a>
-        </li>
+        </li> -->
         <li class='{selected === "/projects" ? "current" : ""}'>
           <a href="/projects">Projects</a>
         </li>
